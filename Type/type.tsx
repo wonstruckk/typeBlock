@@ -25,10 +25,10 @@ let c: boolean[] = [true];
 
 type Age = number;
 type Name = string;
-type Player = {
-  name: Name;
-  age?: Age;
-};
+// type Player = {
+//   name: Name;
+//   age?: Age;
+// };
 
 //화살표함수에서의 type지정.
 const playerArrow = (name: string): Player => ({
