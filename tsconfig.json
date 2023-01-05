@@ -1,10 +1,19 @@
 // lib :
 
 {
+  // 타입스크립트가 src의 모든파일을 확인한다는 것을 의미한다.
+  "include": ["src"],
   "compilerOptions": {
-    "lib": ["ES6", "DOM"],
+    // 합쳐진 라이브러리 정의 파일.목표로 하는 실행환경.
+    // 자브스크립트 코드가 어디에서 동작할지 알려준다.
+    // 자브스크립트의 어떤버전이 동작할지 알려준다.
+    "lib": ["ES6"],
+    // 자바스크립트 파일이 생성될 위치를 지정.
+    // 타입스크립트는 컴파일러이기 때문에 컴파일하는 JS파일의 위치지정이라 할수 있다.
     "outDir": "build",
-    "strict": true,
+    // 타입스크립트가 js를 사용하게 만들어준다.
+    "esModuleInterop": true,
+    "module": "CommonJS",
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */
@@ -16,6 +25,9 @@
     // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
 
     /* Language and Environment */
+    // 자바스크립트의 버전선택, 컴파일시에 어떤 자바스크립트의 기능이 다운레벨되는지 바꾼다.
+    // ex) 클래스를 받아서 함수로 다운-컴파일함.
+    // ex2) 화살표함수는 일반함수로 다운-컴파일된다.
     "target": "ES6" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     // "jsx": "preserve",                                /* Specify what JSX code is generated. */
